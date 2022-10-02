@@ -15,18 +15,13 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="watched-list" element={<WatchedList />} />
           <Route path="login" element={<Login />} />
           <Route path="wish-list" element={<WishList />} />
           {/* "Home", "Wish-list", "Watched-list", "Login" */}
         </Routes>
-        <div style={{ display: "flex" }}>
-          <MovieCard />
-
-          <MovieCard />
-          <MovieCard />
-        </div>
       </Router>
     </>
   );
