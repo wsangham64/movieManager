@@ -3,25 +3,25 @@ const schema = mongoose.Schema;
 
 const movieSchema = new schema({
   name: {
-    type: string,
+    type: String,
     required: true,
     max: 250,
   },
   staring: [
     {
-      type: string,
+      type: String,
       required: true,
       max: 250,
     },
   ],
   director: {
-    type: string,
+    type: String,
     required: true,
     max: 250,
   },
   music: [
     {
-      type: string,
+      type: String,
       required: true,
       max: 250,
     },
@@ -31,14 +31,14 @@ const movieSchema = new schema({
   },
   platform: [
     {
-      type: string,
+      type: String,
       required: true,
       max: 250,
     },
   ],
   geners: [
     {
-      type: string,
+      type: String,
       required: true,
       max: 250,
     },
@@ -47,7 +47,7 @@ const movieSchema = new schema({
     {
       type: Number,
       user: {
-        type: string,
+        type: String,
       },
     },
   ],
@@ -55,8 +55,10 @@ const movieSchema = new schema({
     {
       type: Number,
       user: {
-        type: string,
+        type: String,
       },
     },
   ],
 });
+
+module.exports = Movie = mongoose.model("Movie", movieSchema, "Movies");

@@ -3,38 +3,38 @@ const schema = mongoose.Schema;
 
 const UserSchema = new schema({
   firstName: {
-    type: sting,
+    type: String,
     required: true,
     max: 50,
   },
   lastName: {
-    type: sting,
+    type: String,
     required: true,
     max: 50,
   },
   username: {
-    type: sting,
+    type: String,
     required: true,
     max: 15,
   },
   password: {
-    type: sting,
+    type: String,
     required: true,
     max: 12,
   },
   gender: {
-    type: sting,
+    type: String,
     required: true,
     max: 10,
   },
-  favourite,
-  theater,
-  ott,
-  watchListOtt,
-  watchListTheater,
-  profile,
-  friends,
-  suggession,
+  // favourite,
+  // theater,
+  // ott,
+  // watchListOtt,
+  // watchListTheater,
+  // profile,
+  // friends,
+  // suggession,
 });
 
-module.exports = User = mongoose.model("User", UserSchema);
+module.exports = User = mongoose.model("User", UserSchema, "Users");
